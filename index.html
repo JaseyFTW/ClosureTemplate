@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complaints Templates</title>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <h1>:: Complaints Templates ::</h1>
+    </div>
+    <div class="select-template">
+      <h2>: Template Selection :</h2>
+      <label>Choose a template:</label>
+      <select class="template-selection-list">
+      <!-- <select id="temp"> -->
+        <option value="-">-</option>
+        <option value="Closure">Closure</option>
+        <option value="Payment">Payment</option>
+      </select>
+    </div>
+    <div class="template-selection-header">
+      <h2>: Template :</h2>
+      <button class="clear-list-btn">Cancel</button>
+    </div>
+    <div class="template-wrapper">
+      <ul class="template-list">
+
+      </ul>
+    </div>
+
+  </div>
+  <template id="blank-template">
+    <li class="template">
+    </li>
+  </template>
+  <template id="closure-template">
+    <li class="template">
+      <label>Incident:</label>
+      <label>Area:</label>
+      <label>Trigram:</label>
+    </li>
+  </template>
+  
+  <template id="payment-template">
+    <li class="template">
+      <label>Cost Centre:</label>
+      <label>Reference:</label>
+    </li>
+  </template>
+  <script src="/js/main.js"></script>
+</body>
+</html>
