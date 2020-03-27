@@ -38,6 +38,8 @@ addTemplateList.addEventListener('change', function(){
 function storeTask() {
   const storeElement = document.querySelector('.template').cloneNode(true);
   storedList.appendChild(storeElement);
+
+  
   storedId++;
 
   setTemplate();
