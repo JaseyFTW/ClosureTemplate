@@ -3,10 +3,12 @@ body{
     font-size: 20px;
     line-height: 1.5em;
     margin: 0;
+    background-color: darkgrey;
 }
 @font-face{
     font-family: myFirstFont;
-    src: url(scriptin.ttf)
+    src: url(./fonts/SCRIPTIN.woff),
+        url(./fonts/SCRIPTIN.woff2)
 }
 h1{
     background: hotpink;
@@ -18,6 +20,16 @@ h1{
     font-family: myFirstFont;
     font-size: 50px;
 }
+#byjason{
+    font-family: myfirstfont;    
+    height: 85px;
+    background: pink;
+    margin:0;
+    padding-left:15px;
+    padding-top: 5px;
+    position: sticky;
+    top: 0;
+}
 .select-template{
     border: hotpink;
     border-style: solid;
@@ -26,6 +38,7 @@ h1{
     padding: 5px;
     margin: 25px 50px;
     overflow: hidden;
+    background-color: white;
 }
 .select-template h2 {
     text-align: center;
@@ -52,6 +65,7 @@ h1{
     border-color: hotpink;
     width: 410px;
     margin: 25px 50px;
+    background-color: white;
 }
 .template-selection-header h2{
     text-align: center;
@@ -61,5 +75,11 @@ h1{
 .functional-buttons{
     text-align: center;
 }
-
+.logentry{
+    margin: 0 auto;
+    top:50px;
+    width: 100px;
+    -webkit-box-sizing: border-box;
+    background-origin: border-box;
+    display: inline-block;
 }
