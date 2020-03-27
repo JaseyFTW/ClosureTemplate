@@ -8,10 +8,10 @@
 <body>
   <div class="wrapper">
     <div class="header">
-      <h1>:: Complaints Templates ::</h1>
+      <h1>::: Complaints Templates :::</h1>
     </div>
     <div class="select-template">
-      <h2>: Template Selection :</h2>
+      <h2>:: Template Selection ::</h2>
       <label>Choose a template:</label>
       <select class="template-selection-list">
         <option value="-">-</option>
@@ -32,46 +32,66 @@
     <span class="template"></span> 
   </template>
   <template id="closure-template">
-    <span class="template">
-      <h3>Closure Information</h3>
-      <label>Incident:</label>
-      <input class='incident-input' type="text">
-      <label>Area:</label>
-      <select class="area-selection-list">
-        <option value="-">-</option>
-        <option value="GC">GC</option>
-        <option value="DC">DC</option>
-        <option value="AB">AB</option>
-        <option value="CD">CD</option>
-        <option value="ACDC">ACDC</option>
-      </select>
-      <label>Site:</label>
-      <select class="site-selection-list">
-        <option value="-">-</option>
-        <option value="Blackpool">GC</option>
-        <option value="Glasgow">DC</option>
-        <option value="TCC">AB</option>
-        <option value="Chennai">CD</option>
-      </select>
-      <label>Trigram:</label>
-      <input class='trigram-input' type="text">
-    </span>
+    <div class="template">
+      <div class = 'template-header'>
+        <h3>. Closure Information .</h3>
+      </div>
+      <ul class='template-body'>
+        <li id='incident-row'>
+          <label>Incident:</label>
+          <input class='incident-input' type="text">
+      </li>
+      <li id='area-row'>
+        <label>Area:</label>
+        <select class="area-selection-list">
+          <option value="-">-</option>
+          <option value="GC">GC</option>
+          <option value="DC">DC</option>
+          <option value="AB">AB</option>
+          <option value="CD">CD</option>
+          <option value="ACDC">ACDC</option>
+        </select>
+      </li>
+      <li id='site-row'>
+        <label>Site:</label>
+        <select class="site-selection-list">
+          <option value="-">-</option>
+          <option value="Blackpool">GC</option>
+          <option value="Glasgow">DC</option>
+          <option value="TCC">AB</option>
+          <option value="Chennai">CD</option>
+        </select>
+      </li>
+      <li id='trigram-row'>
+        <label>Trigram:</label>
+        <input class='trigram-input' type="text">
+      </li>
+      </ul>
+    </div>
   </template>
   <template id="payment-template">
-    <span class="template">
-      <h3>Payment Information</h3>
-      <label>Cost Centre:</label>
-      <select class="costcentre-selection-list">
-        <option value="-">-</option>
-        <option value="GC">GC</option>
-        <option value="DC">DC</option>
-        <option value="AB">AB</option>
-        <option value="CD">CD</option>
-        <option value="ACDC">ACDC</option>
-      </select>
-      <label>Reference:</label>
-      <input class='reference-input' type="text">
-    </span>
+    <div class="template">
+      <div class = 'template-header'>
+        <h3>. Payment Information .</h3>
+      </div>
+      <ul class='template-body'>
+        <li id='costcentre-row'>
+          <label>Cost Centre:</label>
+          <select class="costcentre-selection-list">
+            <option value="-">-</option>
+            <option value="GC">GC</option>
+            <option value="DC">DC</option>
+            <option value="AB">AB</option>
+            <option value="CD">CD</option>
+            <option value="ACDC">ACDC</option>
+          </select>
+        </li>
+        <li id='reference-row'>
+          <label>Reference:</label>
+          <input class='reference-input' type="text">
+        </li>
+      </ul>
+    </div>
   </template>
   <script src="/js/main.js"></script>
 </body>
