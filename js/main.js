@@ -11,22 +11,23 @@ const clearButton = document.querySelector('.clear-btn');
 
 let id = 0;
 
+let currentSelection;
+
 setTemplate();
 
 acceptButton.addEventListener('click', function(){
-  addTemplate();
-  //setTemplate();
+  setTemplate();
+  alert("this was added to nowhere, sorry!")
 }, false);
 cancelButton.addEventListener('click', function(){
-  addTemplate();
+  setTemplate();
   //setTemplate();
 }, false);
 clearButton.addEventListener('click', function(){
   //addTemplate();
-  alert("just pretend")
-  //setTemplate();
+  addTemplateList.value = currentSelection;
+  setTemplate();
 }, false);
-
 
 addTemplateList.addEventListener('change', function(){
   setTemplate();
@@ -37,15 +38,16 @@ function setTemplate(){
     const template = document.querySelector('.template').remove();
     id--;
   }
+  
   addTemplate();
 };
 
 function addTemplate(){
   
-  const selectdTemplate = addTemplateList.value;
-  //alert(selectdTemplate);
+  const selectedTemplate = addTemplateList.value;
+  currentSelection = selectedTemplate;
   
-  if(selectdTemplate === "-"){
+  if(selectedTemplate === "-"){
     const templateElement = document.importNode(blankTemplate.content,true);
     //alert(templateElement);
     templateList.appendChild(templateElement);
@@ -54,7 +56,7 @@ function addTemplate(){
     cancelButton.style.display = 'none'
     clearButton.style.display = 'none'
     id++;
-  }else if(selectdTemplate === "Closure"){
+  }else if(selectedTemplate === "Closure"){
     const templateElement = document.importNode(closureTemplate.content,true);
     //alert(templateElement);
     templateList.appendChild(templateElement);
@@ -63,8 +65,8 @@ function addTemplate(){
     cancelButton.style.display = 'initial'
     clearButton.style.display = 'initial'
     id++;
-  }else if(selectdTemplate === "Payment")
-    if(selectdTemplate === "Payment"){
+  }else if(selectedTemplate === "Payment")
+    if(selectedTemplate === "Payment"){
       const templateElement = document.importNode(paymentTemplate.content,true);
       //alert(templateElement);
       templateList.appendChild(templateElement);
@@ -74,7 +76,4 @@ function addTemplate(){
       clearButton.style.display = 'initial'
       id++;
   }
-  
-  
-
 };
