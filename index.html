@@ -21,31 +21,54 @@
     </div>
     <div class="template-selection-header">
       <h2>: Template :</h2>
-      <button class="clear-list-btn">Cancel</button>
     </div>
     <div class="template-wrapper">
       <ul class="template-list">
 
       </ul>
     </div>
-
   </div>
   <template id="blank-template">
-    <li class="template">
-    </li>
+    <span class="template"></span> 
   </template>
   <template id="closure-template">
     <li class="template">
       <label>Incident:</label>
+      <input class='incident-input' type="text">
       <label>Area:</label>
+      <select class="area-selection-list">
+        <option value="-">-</option>
+        <option value="GC">GC</option>
+        <option value="DC">DC</option>
+        <option value="AB">AB</option>
+        <option value="CD">CD</option>
+        <option value="ACDC">ACDC</option>
+      </select>
+      <label>Site:</label>
+      <select class="site-selection-list">
+        <option value="-">-</option>
+        <option value="Blackpool">GC</option>
+        <option value="Glasgow">DC</option>
+        <option value="TCC">AB</option>
+        <option value="Chennai">CD</option>
+      </select>
       <label>Trigram:</label>
+      <input class='trigram-input' type="text">
     </li>
   </template>
-  
   <template id="payment-template">
     <li class="template">
       <label>Cost Centre:</label>
+      <select class="costcentre-selection-list">
+        <option value="-">-</option>
+        <option value="GC">GC</option>
+        <option value="DC">DC</option>
+        <option value="AB">AB</option>
+        <option value="CD">CD</option>
+        <option value="ACDC">ACDC</option>
+      </select>
       <label>Reference:</label>
+      <input class='reference-input' type="text">
     </li>
   </template>
   <script src="/js/main.js"></script>
