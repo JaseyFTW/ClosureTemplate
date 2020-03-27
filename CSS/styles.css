@@ -75,11 +75,25 @@ h1{
 .functional-buttons{
     text-align: center;
 }
-.logentry{
+/* .logentry{
     margin: 0 auto;
     top:50px;
     width: 100px;
     -webkit-box-sizing: border-box;
     background-origin: border-box;
     display: inline-block;
+} */
+
+.stored{
+    border-style: solid;
+    border-color: hotpink;
+    width: 410px;
+    margin: 25px 50px;
+    background-color: white;
+}
+
+.stored-selection-header h2{
+    text-align: center;
+    font-family: myfirstfont;
+    text-decoration: underline;
 }
