@@ -68,35 +68,37 @@
         <h3>. Closure Information .</h3>
       </div>
       <ul class='template-body'>
-        <li id='incident-row'>
+        <li id='incident-row' class="list-item">
           <label>Incident:</label>
-          <input class='incident-input' type="text">
-      </li>
-      <li id='area-row'>
-        <label>Area:</label>
-        <select class="area-selection-list">
-          <option value="-">-</option>
-          <option value="GC">GC</option>
-          <option value="DC">DC</option>
-          <option value="AB">AB</option>
-          <option value="CD">CD</option>
-          <option value="ACDC">ACDC</option>
-        </select>
-      </li>
-      <li id='site-row'>
-        <label>Site:</label>
-        <select class="site-selection-list">
-          <option value="-">-</option>
-          <option value="Blackpool">GC</option>
-          <option value="Glasgow">DC</option>
-          <option value="TCC">AB</option>
-          <option value="Chennai">CD</option>
-        </select>
-      </li>
-      <li id='trigram-row'>
-        <label>Trigram:</label>
-        <input class='trigram-input' type="text" placeholder="E.g 'JWI'">
-      </li>
+          <input class='list-input' id='incident-input' type="text">
+        </li>
+        <li id='area-row' class="list-item">
+          <label>Area:</label>
+          <select class='selection-list' id="area-selection-list">
+            <option value="-">-</option>
+            <option value="GC">GC</option>
+            <option value="DC">DC</option>
+            <option value="AB">AB</option>
+            <option value="CD">CD</option>
+            <option value="ACDC">ACDC</option>
+          </select>
+          <input type="text" class="hidden-input" id="area-text">
+        </li>
+        <li id="site-row" class="list-item">
+          <label>Site:</label>
+          <select class='selection-list' id="site-selection-list">
+            <option value="-">-</option>
+            <option value="Blackpool">GC</option>
+            <option value="Glasgow">DC</option>
+            <option value="TCC">AB</option>
+            <option value="Chennai">CD</option>
+          </select>
+          <input type="text" class="hidden-input" id="site-text">
+        </li>
+        <li id="trigram-row" class="list-item">
+          <label>Trigram:</label>
+          <input class='list-input' id='trigram-input' type="text" placeholder="E.g 'JWI'">
+        </li>
       </ul>
     </div>
   </template>
@@ -106,9 +108,9 @@
         <h3>. Payment Information .</h3>
       </div>
       <ul class='template-body'>
-        <li id='costcentre-row'>
+        <li id='costcentre-row' class="list-item">
           <label>Cost Centre:</label>
-          <select class="costcentre-selection-list">
+          <select class='selection-list' id="costcentre-selection-list">
             <option value="-">-</option>
             <option value="GC">GC</option>
             <option value="DC">DC</option>
@@ -116,10 +118,11 @@
             <option value="CD">CD</option>
             <option value="ACDC">ACDC</option>
           </select>
+          <input type="text" class="hidden-input" id="costcentre-text">
         </li>
-        <li id='reference-row'>
+        <li id='reference-row' class="list-item">
           <label>Reference:</label>
-          <input class='reference-input' type="text">
+          <input class='list-input' id='reference-input' type="text">
         </li>
       </ul>
     </div>

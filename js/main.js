@@ -34,15 +34,54 @@ addTemplateList.addEventListener('change', function(){
   setTemplate();
 }, false);
 
+// let hiddenInputs = templateElement.querySelectorAll('.hidden-input');
+// hiddenInputs.forEach(hiddenInput => {
+//   hiddenInput.style.display = 'none';
+// });
 
 function storeTask() {
+
   const storeElement = document.querySelector('.template').cloneNode(true);
   storedList.appendChild(storeElement);
 
+
+  let hiddenInputs = storeElement.querySelectorAll('.hidden-input');
+  let selectionStoredInputs = storeElement.querySelectorAll('.selection-list');
   
+  console.log(hiddenInputs);
+  for(let i = 0; i < hiddenInputs.length; i++){
+
+    console.log(hiddenInputs[i].value, selectionStoredInputs[i].value);
+
+  }
+  
+  // hiddenInputs.forEach(hiddenInput => {
+  //   hiddenInput.style.display = 'initial';
+  // });
+
+  // //console.log("prehello",storeElement);
+  // //console.log("hello",selectionStoredInputs);
+  // selectionStoredInputs.forEach(selectionStoredInput => {
+  //   selectionStoredInput.style.display = 'none';
+  // });
+
+  const listInputs = storeElement.querySelectorAll('.list-input');
+
+  listInputs.forEach(listInput => {
+    listInput.readOnly = true;
+  });
+
+  const selectionInputs = storeElement.querySelectorAll('.selection-list');
+
+  // selectionInputs.forEach(selectionInput => {
+  //   selectionInput.visible = false;
+  // });
+
   storedId++;
 
   setTemplate();
+
+
   // const storeElement = document.querySelector('.template').cloneNode;
   // storedList.appendChild(storeElement.cloneNode);
   // storedList.appendChild(storeElement.cloneNode);
@@ -96,28 +135,39 @@ function addTemplate(){
     //alert(templateElement);
     templateList.appendChild(templateElement);
     addTemplateList.selectedIndex = 0;
-    acceptButton.style.display = 'none'
-    cancelButton.style.display = 'none'
-    clearButton.style.display = 'none'
+    acceptButton.style.display = 'none';
+    cancelButton.style.display = 'none';
+    clearButton.style.display = 'none';
     id++;
   }else if(selectedTemplate === "Closure"){
     const templateElement = document.importNode(closureTemplate.content,true);
+    
+    let hiddenInputs = templateElement.querySelectorAll('.hidden-input');
+    hiddenInputs.forEach(hiddenInput => {
+      hiddenInput.style.display = 'none';
+    });
+    console.log(hiddenInputs);
     //alert(templateElement);
     templateList.appendChild(templateElement);
     addTemplateList.selectedIndex = 0;
-    acceptButton.style.display = 'initial'
-    cancelButton.style.display = 'initial'
-    clearButton.style.display = 'initial'
+    acceptButton.style.display = 'initial';
+    cancelButton.style.display = 'initial';
+    clearButton.style.display = 'initial';
     id++;
   }else if(selectedTemplate === "Payment")
     if(selectedTemplate === "Payment"){
       const templateElement = document.importNode(paymentTemplate.content,true);
+      let hiddenInputs = templateElement.querySelectorAll('.hidden-input');
+      hiddenInputs.forEach(hiddenInput => {
+        hiddenInput.style.display = 'none';
+      });
+      console.log(hiddenInputs);
       //alert(templateElement);
       templateList.appendChild(templateElement);
       addTemplateList.selectedIndex = 0;  
-      acceptButton.style.display = 'initial'
-      cancelButton.style.display = 'initial'
-      clearButton.style.display = 'initial'
+      acceptButton.style.display = 'initial';
+      cancelButton.style.display = 'initial';
+      clearButton.style.display = 'initial';
       id++;
   }
 };
